@@ -28895,13 +28895,13 @@ var _hoisted_2 = {
   "class": "py-12"
 };
 var _hoisted_3 = {
-  "class": "mx-auto max-w-7xl sm:px-6 lg:px-8"
+  "class": "pb-4 mx-auto max-w-7xl sm:px-6 lg:px-8"
 };
 
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Add a new car → ");
 
 var _hoisted_5 = {
-  "class": "p-6 overflow-hidden bg-white shadow-xl sm:rounded-lg"
+  "class": "p-6 mt-2 overflow-hidden bg-white shadow-xl sm:rounded-lg"
 };
 var _hoisted_6 = {
   "class": "m-auto"
@@ -28942,7 +28942,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
         href: "cars/create",
-        "class": "pb-2 italic text-gray-500"
+        "class": "text-base italic text-gray-500"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
           return [_hoisted_4];

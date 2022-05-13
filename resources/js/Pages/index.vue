@@ -25,11 +25,11 @@ const destroy = (id) => {
             </h2>
         </template>
         <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <Link href="cars/create" class="pb-2 italic text-gray-500">
+            <div class="pb-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <Link href="cars/create" class="text-base italic text-gray-500">
                 Add a new car &rarr;
                 </Link>
-                <div class="p-6 overflow-hidden bg-white shadow-xl sm:rounded-lg">
+                <div class="p-6 mt-2 overflow-hidden bg-white shadow-xl sm:rounded-lg">
                     <div v-for="car in cars.slice().reverse()" :key="car.id">
 
                         <div class="m-auto">
