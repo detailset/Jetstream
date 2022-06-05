@@ -12,7 +12,7 @@ class CarModel extends Model
     protected $table = 'cars';
     protected $primaryKey = 'id';
     protected $timesstamps = true;
-    protected $fillable = ['name', 'founded', 'description', 'price', 'image_path'];
+    protected $fillable = ['car_name', 'founded', 'description', 'price', 'image_path', 'user_id'];
 
 
     public function user()

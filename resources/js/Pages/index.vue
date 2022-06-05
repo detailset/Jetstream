@@ -53,7 +53,7 @@ const destroy = (id) => {
                             <h2 class="text-5xl text-gray-700 hover:text-gray-500">
 
                                 <Link :href="route('cars.show', car.id)">
-                                Name: {{ car.name }}
+                                Name: {{ car.car_name }}
                                 </Link>
                                 
                             </h2>
@@ -62,6 +62,9 @@ const destroy = (id) => {
                             </p>
                             <p class="py-2 text-lg text-gray-700">
                                 Price: {{ car.price }}
+                            </p>
+                            <p class="py-2 text-lg text-gray-700">
+                                Added By: {{ car.name }}
                             </p>
                             <hr class="mt-4 mb-8">
                         </div>

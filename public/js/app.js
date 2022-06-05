@@ -24051,7 +24051,7 @@ __webpack_require__.r(__webpack_exports__);
     var expose = _ref.expose;
     expose();
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.useForm)({
-      name: '',
+      car_name: '',
       founded: '',
       description: '',
       price: '',
@@ -24061,7 +24061,7 @@ __webpack_require__.r(__webpack_exports__);
     var submit = function submit() {
       form.post(route('cars.store'), {
         onFinish: function onFinish() {
-          return form.reset('name', 'founded', 'description', 'price', 'image');
+          return form.reset('car_name', 'founded', 'description', 'price', 'image');
         }
       });
     };
@@ -24222,7 +24222,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
-    name: String,
+    car_name: String,
     image: String,
     price: String,
     founded: String,
@@ -28623,9 +28623,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         onSubmit: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)($setup.submit, ["prevent"])
       }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["JetInput"], {
         id: "name",
-        modelValue: $setup.form.name,
+        modelValue: $setup.form.car_name,
         "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-          return $setup.form.name = $event;
+          return $setup.form.car_name = $event;
         }),
         type: "text",
         "class": "block w-full mt-1",
@@ -28633,7 +28633,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         placeholder: "Name..."
       }, null, 8
       /* PROPS */
-      , ["modelValue"])]), $props.errors.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.errors.name), 1
+      , ["modelValue"])]), $props.errors.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.errors.car_name), 1
       /* TEXT */
       )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["JetInput"], {
         id: "founded",
@@ -28936,8 +28936,11 @@ var _hoisted_12 = {
 var _hoisted_13 = {
   "class": "py-2 text-lg text-gray-700"
 };
+var _hoisted_14 = {
+  "class": "py-2 text-lg text-gray-700"
+};
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "mt-4 mb-8"
 }, null, -1
 /* HOISTED */
@@ -28989,7 +28992,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           href: _ctx.route('cars.show', car.id)
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-            return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Name: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.name), 1
+            return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Name: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.car_name), 1
             /* TEXT */
             )];
           }),
@@ -29002,7 +29005,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* TEXT */
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_13, " Price: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.price), 1
         /* TEXT */
-        ), _hoisted_14])]);
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_14, " Added By: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.name), 1
+        /* TEXT */
+        ), _hoisted_15])]);
       }), 128
       /* KEYED_FRAGMENT */
       ))])])])];
@@ -29080,7 +29085,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         alt: "Car Image"
       }, null, 8
       /* PROPS */
-      , _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.name), 1
+      , _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.car_name), 1
       /* TEXT */
       )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_7, " Founded: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.founded), 1
       /* TEXT */

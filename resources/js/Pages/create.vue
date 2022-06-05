@@ -6,7 +6,7 @@ import JetButton from '@/Jetstream/Button.vue';
 import JetValidationErrors from '@/Jetstream/ValidationErrors.vue';
 
 const form = useForm({
-    name: '',
+    car_name: '',
     founded: '',
     description: '',
     price: '',
@@ -20,7 +20,7 @@ defineProps({
 
 const submit = () => {
     form.post(route('cars.store'), {
-        onFinish: () => form.reset('name', 'founded', 'description', 'price', 'image'),
+        onFinish: () => form.reset('car_name', 'founded', 'description', 'price', 'image'),
     });
 };
 
@@ -44,12 +44,12 @@ const submit = () => {
                     <form @submit.prevent="submit">
 
                         <div>
-                            <JetInput id="name" v-model="form.name" type="text" class="block w-full mt-1" autofocus
+                            <JetInput id="name" v-model="form.car_name" type="text" class="block w-full mt-1" autofocus
                                 placeholder="Name..." />
                         </div>
 
                         <div v-if="errors.name" class="text-sm text-red-600 ">
-                            {{ errors.name }}
+                            {{ errors.car_name }}
                         </div>
 
                         <div class="mt-4">
