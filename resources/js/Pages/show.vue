@@ -4,7 +4,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 
 defineProps({
 
-      name: String,
+      car_name: String,
       image: String,
       price: String,
       founded: String,
@@ -29,7 +29,7 @@ defineProps({
                         <img class="w-5/12 m-auto mb-8 rounded-lg shadow-xl h-2/4" :src="image" alt="Car Image">
 
                         <h1 class="text-2xl text-gray-600 uppercase bold">
-                              {{ name }}
+                              {{ car_name }}
                         </h1>
 
                   </div>

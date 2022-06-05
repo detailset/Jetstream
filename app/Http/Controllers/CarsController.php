@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\CarModel;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
@@ -18,11 +20,19 @@ class CarsController extends Controller
 
     public function index()
     {
-        $cars = CarModel::all();
 
-        return Inertia::render('index', [
-            'cars' => $cars,
-        ]);
+        $cars = User::join('cars', 'cars.user_id', '=', 'users.id')
+            ->get(['users.name', 'cars.id', 'cars.car_name', 'cars.founded', 'cars.description', 'cars.price', 'cars.image_path']);
+
+        return Inertia::render('index', compact('cars'));
+
+
+
+        // $cars = CarModel::all();
+
+        // return Inertia::render('index', [
+        //     'cars' => $cars,
+        // ]);
     }
 
     /**
@@ -46,7 +56,7 @@ class CarsController extends Controller
     {
         $request->validate([
             'image' => 'required|mimes:jpeg,png,jpg|max:5048',
-            'name' => 'required|min:2',
+            'car_name' => 'required|min:2',
             'founded' => 'required',
             'description' => 'required',
             'price' => 'required',
@@ -58,10 +68,11 @@ class CarsController extends Controller
 
         $car = CarModel::create([
             'image_path' => $image,
-            'name' => $request->input('name'),
+            'car_name' => $request->input('car_name'),
             'founded' => $request->input('founded'),
             'description' => $request->input('description'),
             'price' => $request->input('price'),
+            'user_id' => Auth::id(),
         ]);
 
         return Redirect::route('cars.index');
@@ -81,7 +92,7 @@ class CarsController extends Controller
         return Inertia::render('show', [
             'id' => $car->id,
             'image' => asset('storage/' . $car->image_path),
-            'name' => $car->name,
+            'car_name' => $car->car_name,
             'description' => $car->description,
             'founded' => $car->founded,
             'price' => $car->price,
@@ -96,16 +107,19 @@ class CarsController extends Controller
      */
     public function edit($id)
     {
+
+
         $car = CarModel::find($id);
 
         return Inertia::render('edit', [
             'id' => $car->id,
             'image' => asset('storage/' . $car->image_path),
-            'name' => $car->name,
+            'name' => $car->car_name,
             'description' => $car->description,
             'founded' => $car->founded,
             'price' => $car->price,
         ]);
+        
 
     }
 
@@ -144,7 +158,7 @@ class CarsController extends Controller
             $image = $request->file('image')->store('images', 'public');
 
             $car->update([
-                'name' => $request->input('name'),
+                'car_name' => $request->input('name'),
                 'founded' => $request->input('founded'),
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),
@@ -154,7 +168,7 @@ class CarsController extends Controller
         } else {
 
             $car->update([
-                'name' => $request->input('name'),
+                'car_name' => $request->input('name'),
                 'founded' => $request->input('founded'),
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),
