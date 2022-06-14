@@ -28927,20 +28927,27 @@ var _hoisted_9 = ["onClick"];
 var _hoisted_10 = {
   "class": "italic font-bold text-blue-500 uppercase font-xs"
 };
-var _hoisted_11 = {
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "italic font-bold text-blue-500 uppercase font-xs"
+}, " This is for Testing Git Branch ", -1
+/* HOISTED */
+);
+
+var _hoisted_12 = {
   "class": "text-5xl text-gray-700 hover:text-gray-500"
 };
-var _hoisted_12 = {
-  "class": "py-6 text-lg text-gray-700"
-};
 var _hoisted_13 = {
-  "class": "py-2 text-lg text-gray-700"
+  "class": "py-6 text-lg text-gray-700"
 };
 var _hoisted_14 = {
   "class": "py-2 text-lg text-gray-700"
 };
+var _hoisted_15 = {
+  "class": "py-2 text-lg text-gray-700"
+};
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "mt-4 mb-8"
 }, null, -1
 /* HOISTED */
@@ -28988,7 +28995,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* PROPS */
         , _hoisted_9)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_10, " Founded: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.founded), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+        ), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
           href: _ctx.route('cars.show', car.id)
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -29001,13 +29008,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
         }, 1032
         /* PROPS, DYNAMIC_SLOTS */
-        , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_12, " Description: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.description), 1
+        , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_13, " Description: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.description), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_13, " Price: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.price), 1
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_14, " Price: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.price), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_14, " Added By: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.name), 1
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_15, " Added By: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(car.name), 1
         /* TEXT */
-        ), _hoisted_15])]);
+        ), _hoisted_16])]);
       }), 128
       /* KEYED_FRAGMENT */
       ))])])])];
