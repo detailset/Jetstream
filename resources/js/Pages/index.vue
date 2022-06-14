@@ -50,6 +50,10 @@ const destroy = (id) => {
                             <span class="italic font-bold text-blue-500 uppercase font-xs">
                                 Founded: {{ car.founded }}
                             </span>
+
+                            <div class="italic font-bold text-blue-500 uppercase font-xs">
+                                This is for Testing Git Branch
+                            </div>
                             <h2 class="text-5xl text-gray-700 hover:text-gray-500">
 
                                 <Link :href="route('cars.show', car.id)">
